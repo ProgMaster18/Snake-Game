@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Snake Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="game-card" id="gamecard">
+            <div class="canvas-wrap">
+                <canvas id="gameCanvas" width="600" height="600" aria-label="Snake Game"></canvas>
+            </div>
+
+            <div class="overlay" id="overlay" style="display: none;">
+                <div class="box" id="overlayBox">
+                    <h2 id="overlayTitle">Paused</h2>
+                    <p id="overlayMsg">Press Resume to continue</p>
+                    <div style="margin-top: 12px;">
+                        <button id="resumeBtn" class="secondary">Resume</button>
+                        <button id="restartBtn">Restart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="panel">
+            <div>
+                <h1>Snake Game</h1>
+                <p class="small">Move the snake,eat the glowing food, and grow. Avid Hitting walls or yourself.</p>
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span style="font-size: 12px; color: var(--muted);">Score</span>
+                    <strong id="score">0</strong>
+                </div>
+                <div class="stat">
+                    <span style="font-size: 12px; color: var(--muted);">High Score</span>
+                    <strong id="highScore">0</strong>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="startBtn">Start game</button>
+                <button id="pauseBtn" class="secondary">Pause</button>
+                <button id="speedBtn" class="secondary">Speed: Normal</button>
+            </div>
+
+            <p class="hint">Controls: Arrow keys or WASD. On Mobile, use the D-pad below.</p>
+
+            <div class="touch-controls" id="touchControls">
+                <div class="dpad">
+                    <div></div>
+                    <button data-dir="up">↑</button>
+                    <div></div>
+
+                    <button data-dir="left">←</button>
+                    <button data-dir="down">↓</button>
+                    <button data-dir="right">→</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
